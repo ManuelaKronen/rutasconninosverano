@@ -27,91 +27,92 @@
 
 ## 📁 Project Structure
 
+```txt
 src/
+├── assets/                        # Images, icons, and static assets
+│   └── images/
 │
-├── assets/ # Images, icons, and static assets
-│ └── images/
+├── components/                    # Reusable UI components
+│   ├── Header.tsx
+│   ├── Header.css
+│   ├── Footer.tsx
+│   ├── Footer.css
+│   ├── Button.tsx
+│   ├── Button.css
+│   ├── Carousel.tsx
+│   └── Carousel.css
 │
-├── components/ # Reusable UI components
-│ ├── Header.tsx
-│ ├── Header.css
-│ ├── Footer.tsx
-│ ├── Footer.css
-│ ├── Button.tsx
-│ ├── Button.css
-│ ├── Carousel.tsx
-│ └── Carousel.css
+├── features/                      # Feature folders (by domain)
+│   ├── trails/                    # Trails map and interactive cards
+│   │   ├── components/
+│   │   │   ├── TrailCard.tsx
+│   │   │   ├── TrailCard.css
+│   │   │   ├── TrailMap.tsx
+│   │   │   └── TrailMap.css
+│   │   ├── hooks/
+│   │   │   └── useSelectedTrail.ts
+│   │   ├── services/
+│   │   │   └── trailApi.ts
+│   │   ├── trailTypes.ts
+│   │   └── trailsData.ts          # Static trail data (5 Wikiloc trails)
+│   │
+│   ├── inspiration/               # Blog-style tips & pinned posts
+│   │   ├── components/
+│   │   │   └── BlogPost.tsx
+│   │   │   └── BlogPost.css
+│   │   └── services/
+│   │       └── inspirationApi.ts
+│   │
+│   ├── calendar/                  # Event calendar with expiry
+│   │   ├── components/
+│   │   │   └── Calendar.tsx
+│   │   │   └── Calendar.css
+│   │   ├── services/
+│   │   │   └── calendarApi.ts
+│   │   └── utils/
+│   │       └── filterExpiredEvents.ts
+│   │
+│   └── contact/                   # Contact form and social links
+│       ├── components/
+│       │   ├── ContactForm.tsx
+│       │   ├── ContactForm.css
+│       │   ├── SocialLinks.tsx
+│       │   └── SocialLinks.css
+│       └── services/
+│           └── contactApi.ts
 │
-├── features/ # Feature folders (by domain)
-│ ├── trails/ # Trails map and interactive cards
-│ │ ├── components/
-│ │ │ ├── TrailCard.tsx
-│ │ │ ├── TrailCard.css
-│ │ │ ├── TrailMap.tsx
-│ │ │ └── TrailMap.css
-│ │ ├── hooks/
-│ │ │ └── useSelectedTrail.ts
-│ │ ├── services/
-│ │ │ └── trailApi.ts
-│ │ ├── trailTypes.ts
-│ │ └── trailsData.ts # Static trail data (5 Wikiloc trails)
-│ │
-│ ├── inspiration/ # Blog-style tips & pinned posts
-│ │ ├── components/
-│ │ │ └── BlogPost.tsx
-│ │ │ └── BlogPost.css
-│ │ └── services/
-│ │ └── inspirationApi.ts
-│ │
-│ ├── calendar/ # Event calendar with expiry
-│ │ ├── components/
-│ │ │ └── Calendar.tsx
-│ │ │ └── Calendar.css
-│ │ ├── services/
-│ │ │ └── calendarApi.ts
-│ │ └── utils/
-│ │ └── filterExpiredEvents.ts
-│ │
-│ └── contact/ # Contact form and social links
-│ ├── components/
-│ │ ├── ContactForm.tsx
-│ │ ├── ContactForm.css
-│ │ ├── SocialLinks.tsx
-│ │ └── SocialLinks.css
-│ └── services/
-│ └── contactApi.ts
+├── pages/                         # Top-level page components (React routes)
+│   ├── HomePage.tsx
+│   ├── HomePage.css
+│   ├── MapPage.tsx
+│   ├── MapPage.css
+│   ├── InspirationPage.tsx
+│   ├── InspirationPage.css
+│   ├── CalendarPage.tsx
+│   ├── CalendarPage.css
+│   ├── ContactPage.tsx
+│   └── ContactPage.css
 │
-├── pages/ # Top-level page components (React routes)
-│ ├── HomePage.tsx
-│ ├── HomePage.css
-│ ├── MapPage.tsx
-│ ├── MapPage.css
-│ ├── InspirationPage.tsx
-│ ├── InspirationPage.css
-│ ├── CalendarPage.tsx
-│ ├── CalendarPage.css
-│ ├── ContactPage.tsx
-│ └── ContactPage.css
+├── routes/                        # React Router setup
+│   └── AppRoutes.tsx
 │
-├── routes/ # React Router setup
-│ └── AppRoutes.tsx
+├── styles/                        # Global and layout-wide styles
+│   ├── base.css                   # Reset, fonts, CSS variables
+│   └── layout.css                 # App-wide grid/layout rules
 │
-├── styles/ # Global and layout-wide styles
-│ ├── base.css # Reset, fonts, CSS variables
-│ └── layout.css # App-wide grid/layout rules
+├── hooks/                         # Global custom React hooks
+│   └── useWindowSize.ts
 │
-├── hooks/ # Global custom React hooks
-│ └── useWindowSize.ts
+├── services/                      # Shared utilities (e.g., API client)
+│   └── httpClient.ts
 │
-├── services/ # Shared utilities (e.g., API client)
-│ └── httpClient.ts
+├── types/                         # Global TypeScript types and enums
+│   └── common.ts
 │
-├── types/ # Global TypeScript types and enums
-│ └── common.ts
+├── utils/                         # Helper functions (date, formatting)
+│   └── dateUtils.ts
 │
-├── utils/ # Helper functions (date, formatting)
-│ └── dateUtils.ts
-│
-├── App.tsx # Root component with layout and routing
-├── App.css # App-level styles
-└── main.tsx # React app entry point
+├── App.tsx                        # Root component with layout and routing
+├── App.css                        # App-level styles
+└── main.tsx                       # React app entry point
+```
