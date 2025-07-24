@@ -1,10 +1,9 @@
-// src/App.tsx
+import "./App.css";
+
 function App() {
   return (
-    <div style={{ backgroundColor: "green", height: "100vh" }}>
-      <h1 style={{ color: "white", textAlign: "center", paddingTop: "2rem" }}>
-        Green Background Test 🚀
-      </h1>
+    <div className="green-test">
+      <h1>Green Background Test 🚀</h1>
     </div>
   );
 }
